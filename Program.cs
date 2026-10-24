@@ -136,32 +136,3 @@
   }
   Console.WriteLine($"Сумма цифр: {sumchisel}");
   Console.WriteLine($"Количество цифр: {countchisel}");
-
-// Итоговая задача. «Угадай число»
-int otvet = 242;
-bool win = false;
-Console.WriteLine("Игра: Угадай число от 1 до 300! У вас есть 10 попыток.");
-for (int popitka = 1; popitka <= 10; popitka++)
-{
-    Console.Write($"Попытка {popitka}. Введите число: ");
-    int vvod = Convert.ToInt32(Console.ReadLine());
-
-    if (vvod == otvet)
-    {
-        Console.WriteLine($"Вы угадали! Попыток: {popitka}");
-        win = true;
-        break;
-    }
-    else if (vvod < otvet)
-    {
-        Console.WriteLine("Больше");
-    }
-    else
-    {
-        Console.WriteLine("Меньше");
-    }
-}
-if (!win)
-{
-    Console.WriteLine($"Вы не угадали, число было {otvet}");
-}
